@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FastSewa Service Quote</title>
+    <style>
+        body {
+            font-family: 'Helvetica', 'Arial', sans-serif;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #eee;
+        }
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #2c3e50;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        .logo-area h1 {
+            color: #2c3e50;
+            margin: 0;
+            font-size: 32px;
+            text-transform: uppercase;
+        }
+        .logo-area span {
+            color: #27ae60; /* FastSewa Green */
+        }
+        .company-details {
+            text-align: right;
+            font-size: 14px;
+            color: #7f8c8d;
+        }
+        .invoice-info {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 40px;
+        }
+        .client-details h3, .invoice-meta h3 {
+            font-size: 16px;
+            margin-bottom: 10px;
+            color: #2c3e50;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 5px;
+            display: inline-block;
+        }
+        .client-details p, .invoice-meta p {
+            margin: 5px 0;
+            font-size: 14px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 30px;
+        }
+        table th {
+            background-color: #f8f9fa;
+            color: #2c3e50;
+            font-weight: bold;
+            text-align: left;
+            padding: 12px;
+            border-bottom: 2px solid #ddd;
+        }
+        table td {
+            padding: 12px;
+            border-bottom: 1px solid #eee;
+        }
+        .total-section {
+            text-align: right;
+            margin-top: 20px;
+        }
+        .total-section h2 {
+            color: #2c3e50;
+            font-size: 24px;
+        }
+        .footer {
+            margin-top: 50px;
+            text-align: center;
+            font-size: 12px;
+            color: #95a5a6;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+        }
+        /* This class makes sure the signature area looks official */
+        .signature-box {
+            margin-top: 40px;
+            text-align: right;
+            padding-right: 20px;
+        }
+        .signature-line {
+            display: inline-block;
+            width: 200px;
+            border-top: 1px solid #333;
+            text-align: center;
+            padding-top: 5px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header-container">
+        <div class="logo-area">
+            <h1>Fast<span>Sewa</span></h1>
+            <p style="font-size: 14px; margin:0;">Super Portal Services</p>
+        </div>
+        <div class="company-details">
+            <p><strong>FastSewa Pvt Ltd.</strong></p>
+            <p>123 Service Road, Tech City</p>
+            <p>contact@fastsewa.com | +91-98765-43210</p>
+        </div>
+    </div>
+
+    <div class="invoice-info">
+        <div class="client-details">
+            <h3>Quotation For:</h3>
+            <p><strong>Name:</strong> {{ customer_name }}</p>
+            <p><strong>Phone:</strong> {{ customer_phone }}</p>
+            <p><strong>Address:</strong> {{ customer_address }}</p>
+        </div>
+        <div class="invoice-meta">
+            <h3>Quote Details:</h3>
+            <p><strong>Quote ID:</strong> #{{ quote_id }}</p>
+            <p><strong>Date:</strong> {{ date }}</p>
+            <p><strong>Service Category:</strong> {{ service_category }}</p>
+        </div>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th style="width: 50%;">Description</th>
+                <th style="width: 20%;">Rate / Unit</th>
+                <th style="width: 10%;">Qty</th>
+                <th style="text-align: right;">Amount (₹)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{ service_description }}</td>
+                <td>₹{{ rate }}</td>
+                <td>{{ quantity }}</td>
+                <td style="text-align: right;">₹{{ amount }}</td>
+            </tr>
+            </tbody>
+    </table>
+
+    <div class="total-section">
+        <p>Subtotal: ₹{{ amount }}</p>
+        <p>Tax (18% GST): ₹{{ tax_amount }}</p>
+        <h2>Total Estimate: ₹{{ total_amount }}</h2>
+    </div>
+
+    <div class="signature-box">
+        <br><br>
+        <div class="signature-line">Authorized Signatory</div>
+    </div>
+
+    <div class="footer">
+        <p>This is a computer-generated document and does not require a physical signature.</p>
+        <p>Terms & Conditions Apply. Valid for 30 days from the date of issue.</p>
+    </div>
+
+</body>
+</html>

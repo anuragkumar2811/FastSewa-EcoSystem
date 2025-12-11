@@ -1,0 +1,124 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "Hi",
+        "Hello",
+        "Hey",
+        "Good morning",
+        "Is anyone there?",
+        "Start"
+      ],
+      "responses": [
+        "Hello! Welcome to FastSewa Super Portal. How can I assist you today?",
+        "Hi there! I am the FastSewa Assistant. Which service are you looking for?"
+      ]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": [
+        "Bye",
+        "See you later",
+        "Goodbye",
+        "Exit",
+        "Stop"
+      ],
+      "responses": [
+        "Goodbye! Thank you for visiting FastSewa.",
+        "See you soon! Let us know if you need help with Construction, Legal, or Medical services."
+      ]
+    },
+    {
+      "tag": "construction_buildnet",
+      "patterns": [
+        "I need to build a house",
+        "Construction cost",
+        "FastSewa BuildNet services",
+        "Quote for building",
+        "House design price"
+      ],
+      "responses": [
+        "FastSewa BuildNet offers complete construction services including residential and commercial projects. Please visit our Construction page or use our Construction Calculator for an estimate."
+      ]
+    },
+    {
+      "tag": "security_secureforce",
+      "patterns": [
+        "I need a security guard",
+        "Hire security",
+        "Guard services",
+        "FastSewa SecureForce",
+        "Do you provide armed guards?"
+      ],
+      "responses": [
+        "FastSewa SecureForce provides professional trained security guards for homes and offices. Would you like to see our security plans?"
+      ]
+    },
+    {
+      "tag": "legal_filings",
+      "patterns": [
+        "GST registration",
+        "Legal advice",
+        "File income tax",
+        "FastSewa Filings",
+        "Need a lawyer"
+      ],
+      "responses": [
+        "FastSewa Filings handles GST registration, ITR filing, and general legal documentation. Please head to the Legal section to upload your documents."
+      ]
+    },
+    {
+      "tag": "medical_services",
+      "patterns": [
+        "I need a doctor",
+        "Ambulance service",
+        "Medical emergency",
+        "Book an appointment",
+        "Nursing staff"
+      ],
+      "responses": [
+        "Our Medical Services connect you with nearby doctors and ambulances. If this is an emergency, please call our hotline immediately. Otherwise, visit the Medical tab to book."
+      ]
+    },
+    {
+      "tag": "land_verification",
+      "patterns": [
+        "Check land papers",
+        "Verify property",
+        "Land dispute",
+        "Is this land legal?",
+        "Property verification"
+      ],
+      "responses": [
+        "Our Land Verification team checks property papers for legal disputes and ownership history. Please provide the property details in the Land Verification form."
+      ]
+    },
+    {
+      "tag": "repair_maintenance",
+      "patterns": [
+        "I need a plumber",
+        "Electrician needed",
+        "AC repair",
+        "Home maintenance",
+        "Fix my tap"
+      ],
+      "responses": [
+        "For Repair & Maintenance, we have expert plumbers, electricians, and technicians available. You can book a slot on the Repair services page."
+      ]
+    },
+    {
+      "tag": "thanks",
+      "patterns": [
+        "Thank you",
+        "Thanks",
+        "That helps",
+        "Thanks a lot"
+      ],
+      "responses": [
+        "You are welcome! Happy to help.",
+        "My pleasure. Let me know if you need anything else from FastSewa."
+      ]
+    }
+  ]
+}
